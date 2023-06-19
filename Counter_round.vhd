@@ -19,8 +19,8 @@ architecture arqct of counter_time is
 		if reset = '1' then
 			tempo_reg <= "0000"
 		elsif (clk_1hz'event and clk_1hz ='1' and E ='1') then
-			round_reg <= tempo_reg + 1
+			round_reg <= round_reg + 1
 	end process;
 	round <= round_reg
-	end_round <= '1' when tempo_reg = "1111" else '0';
+	end_round <= '1' when round_reg = "1111" else '0';
 end arqct
