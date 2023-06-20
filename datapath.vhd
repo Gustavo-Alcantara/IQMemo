@@ -283,6 +283,42 @@ begin
 	DECT2: decoder_termometrico port map(round, stermoround);
 	andtermo = stermoround and (not E1); 
 	Mux4: mux2x1_16bits port map(stermobonus, andtermo, SW(17), LEDR(15 downto0));
-	Dec1: d_code port	map(CODE(31 downto 28), )
 	
+	--Decoders para saída nos hexadecimal--
+	Dcod1: d_code port map(CODE(31 downto 28), sdecod7);
+	Dec1: decod7seg port map(RESULT(7 downto 4),sdec7);
+	Mux5: mux2x1_7bits port map(sdecod7,sdec7, E5, smuxhex7);
+	HEX7 <= E25 or smuxhex7;
+	
+	Dcod2: d_code port map(CODE(27 downto 24), sdecod6);
+	Dec2: decod7seg port map(RESULT(3 downto 0),sdec6);
+	Mux6: mux2x1_7bits port map(sdecod6,sdec6, E5, smuxhex6);
+	HEX6 <= E25 or smuxhex6;
+	
+	Dcod3: d_code port map(CODE(23 downto 20), sdecod5);
+	Mux7: mux2x1_7bits port map(sdecod5,"letra t", E3, smuxhex5);
+	HEX5 <= E23 or smuxhex5;
+	
+	Dcod4: d_code port map(CODE(19 downto 16), sdecod4);
+	Dec3: decod7seg port map(Tempo,sdec4);
+	Mux8: mux2x1_7bits port map(sdecod4,sdec6, E3, smuxhex4);
+	HEX4 <= E23 or smuxhex4;
+	
+	Dcod5: d_code port map(CODE(15 downto 12), sdecod3);
+	Mux9: mux2x1_7bits port map(sdecod3,"letra C", E1, smuxhex3);
+	HEX3 <= E12 or smuxhex3;
+	
+	Dcod6: d_code port map(CODE(11 downto 8), sdecod2);
+	Dec4: decod7seg port map("00"&SEL(3 downto 2),sdec2);
+	Mux10: mux2x1_7bits port map(sdecod4,sdec6, E1, smuxhex2);
+	HEX2 <= E12 or smuxhex2;
+	
+	Dcod7: d_code port map(CODE(7 downto 4), sdecod1);
+	Mux11: mux2x1_7bits port map(sdecod1,"letra L", E1, smuxhex1);
+	HEX1 <= E12 or smuxhex1;
+	
+	Dcod8: d_code port map(CODE(3 downto 0), sdecod0);
+	Dec5: decod7seg port map("00"&SEL(1 downto 0),sdec0);
+	Mux12: mux2x1_7bits port map(sdecod0,sdec0, E1, smuxhex0);
+	HEX0 <= E12 or smuxhex0;
 end arc;
