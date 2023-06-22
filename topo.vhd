@@ -55,5 +55,5 @@ component ButtonSync is port( --saida ja negada
 end component;
 
 begin
-
+		
 end circuito;

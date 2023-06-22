@@ -9,6 +9,7 @@ entity mux4x1_1bit is port(
 	sel: in std_logic_vector(1 downto 0);
 	saida: out std_logic
 );
+end mux4x1_1bit;
 		
 architecture aqtmux of mux4x1_1bit is
 begin

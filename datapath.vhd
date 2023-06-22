@@ -276,9 +276,11 @@ begin
 	Mux2: mux4x1_15bits port map(sRom0a,sRom1a,sRom2a,sRom3a, SEL(3 downto 2), CODE_aux);
 	Mux3: mux4x1_32bits port map(sRom0,sRom1,sRom2,sRom3,SEL(3 downto 2), CODE);
 	LC: logica(round, Bonus_reg, SEL(1 downto 0), RESULT);
+	
 	E23 <= E2 nor E3;
 	E25 <= E2 nor E5;
 	E12 <= E1 nor E2;
+	
 	DECT1: decoder_termometrico port map(Bonus_reg, stermobonus);
 	DECT2: decoder_termometrico port map(round, stermoround);
 	andtermo = stermoround and (not E1); 

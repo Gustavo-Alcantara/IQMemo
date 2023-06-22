@@ -9,6 +9,7 @@ entity mux2x1_7bits is port(
 		B: in std_logic_vector(6 downto 0);
 		sel: in std_logic;
 		X: in std_logic_vector(6 downto 0));
+end mux2x1_7bits;
 		
 architecture aqtmux of mux2x1_7bits is
 begin

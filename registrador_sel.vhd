@@ -12,7 +12,7 @@ architecture behv of registrador_sel is
 begin
 	 process(clock, D, R) 
 	 begin 
-		 if R = '0' then
+		 if R = '1' then
 			Q <= "0000";
 		 elsif (clock'event and clock = '1' and E) then 
 			Q <= D;

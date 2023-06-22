@@ -67,3 +67,4 @@ set_global_assignment -name VHDL_FILE mux4115b.vhd
 set_global_assignment -name VHDL_FILE mux411b.vhd
 set_global_assignment -name VHDL_FILE dec7seg.vhd
 set_global_assignment -name VHDL_FILE mux217b.vhd
+set_global_assignment -name VHDL_FILE controle.vhd
