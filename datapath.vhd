@@ -265,25 +265,25 @@ begin
 --Conexoes e atribuicoes a partir daqui. Dica: usar os mesmos nomes e I/O ja declarados nos components. Todos os signals necessarios ja estao declarados.
 	Ct: counter_time port map(R1, E3, clk_1hz,tempo,end_time);
 	Cr: counter_round port map(R2, E4, clk_050Hz, X,end_round);
-	FSM1: FSM_clock port map(R1, E2 or E3, clk_050Hz, clk_020Hz, clk_025Hz, clk_033Hz, clk_050Hz, clk_1Hz);
+	FSM1: FSM_clock_emu port map(R1, E2 or E3, clk_050Hz, clk_020Hz, clk_025Hz, clk_033Hz, clk_050Hz, clk_1Hz);
 	Mux1: mux4x1_1bit port map(clk_020Hz, clk_025Hz, clk_033Hz, clk_050Hz, SEL, end_FPGA);
-	Reg1: registrador_sel port map(SW(3 downto 0), R2, E1, clk_050Hz, SEL);
-	Reg2: registrador_user port map(SW(14 downto 0),R2,E3,clk_050Hz, USER);
+	Reg1: registrador_sel port map(R2, E1, clk_050Hz, SW(3 downto 0), SEL);
+	Reg2: registrador_user port map(R2,E3,clk_050Hz, SW(14 downto 0), USER);
 	Sub1: subtracao port map(Bonus_reg, erro, Bonus);
 	Reg3: registrador_bonus port map(R2, E4,clk_050Hz, Bonus, Bonus_reg);
 	Comp1: comp_end port map(Bonus_reg, end_game);
 	Comp2: comp_erro port map(CODE_aux, USER, erro);
 	Mux2: mux4x1_15bits port map(sRom0a,sRom1a,sRom2a,sRom3a, SEL(3 downto 2), CODE_aux);
 	Mux3: mux4x1_32bits port map(sRom0,sRom1,sRom2,sRom3,SEL(3 downto 2), CODE);
-	LC: logica(round, Bonus_reg, SEL(1 downto 0), RESULT);
+	LC: logica(X, Bonus_reg, SEL(1 downto 0), RESULT);
 	
 	E23 <= E2 nor E3;
 	E25 <= E2 nor E5;
 	E12 <= E1 nor E2;
 	
 	DECT1: decoder_termometrico port map(Bonus_reg, stermobonus);
-	DECT2: decoder_termometrico port map(round, stermoround);
-	andtermo = stermoround and (not E1); 
+	DECT2: decoder_termometrico port map(X, stermoround);
+	andtermo <= stermoround and (not E1); 
 	Mux4: mux2x1_16bits port map(stermobonus, andtermo, SW(17), LEDR(15 downto0));
 	
 	--Decoders para saída nos hexadecimal--

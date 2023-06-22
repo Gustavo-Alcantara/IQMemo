@@ -2,14 +2,14 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity ROM1a is
+entity ROM2a is
 port(
 	  address: in std_logic_vector(3 downto 0);
 	  output : out std_logic_vector(14 downto 0)
 );
-end ROM1a;
+end ROM2a;
 
-architecture arc_ROM1a of ROM1a is
+architecture arc_ROM2a of ROM2a is
 begin
 
 --         switches 0 a 14
@@ -32,4 +32,4 @@ output <= "010000100110010" when address = "0000" else --ROM0 possui os valores 
 			 "001010001010100" when address = "1110" else
 			 "000101000011001";
 			 
-end arc_ROM1a;
+end arc_ROM2a;

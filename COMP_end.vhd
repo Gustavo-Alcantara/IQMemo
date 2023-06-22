@@ -11,5 +11,6 @@ entity COMP_end is port(
 end COMP_end;
 		
 architecture behav of COMP_end is
+begin
 		endgame <= '1' when E0 = "0000" else '0';
-end behav
+end behav;

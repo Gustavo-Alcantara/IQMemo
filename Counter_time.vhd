@@ -12,15 +12,16 @@ entity counter_time is port(
 		end counter_time;
 		
 architecture arqct of counter_time is
-	signal tempo_reg: std_logic_vector(3 downto 0);
-	
+signal tempo_reg: std_logic_vector(3 downto 0);
+begin
 	process(clock, R)
 	begin
 		if R = '1' then
-			tempo_reg <= "1010"
+			tempo_reg <= "1010";
 		elsif (clock'event and clock ='1' and E ='1') then
-			tempo_reg <= tempo_reg - 1
+			tempo_reg <= tempo_reg - 1;
+		end if;
 	end process;
-	Q <= tempo_reg
+	Q <= tempo_reg;
 	tc <= '1' when tempo_reg = "0000" else '0';
-end arqct
+end arqct;

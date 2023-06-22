@@ -56,7 +56,7 @@ end component;
 	signal BTN1, BTN0: std_logic; 
 
 begin
-		BS1: ButtonSync port map(KEY(1), KEY(0), CLOCK_500Hz, enter, reset);
-		Dt: Datapath port map(CLOCK_500Hz, SW, R1, R2, E1, E2, E3, E4, E5, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, LEDR, end_game, end_time, end_round, end_FPGA);
-		Ctrl: controle port map(enter, reset, CLOCK_500Hz, end_game, end_time, end_round, end_FPGA, R1, R2, E1, E2, E3, E4, E5);
+		BS1: ButtonSync port map(KEY(1), KEY(0), CLK_500Hz, enter, reset);
+		Dt: Datapath port map(CLK_500Hz, SW, R1, R2, E1, E2, E3, E4, E5, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, LEDR, end_game, end_time, end_round, end_FPGA);
+		Ctrl: controle port map(enter, reset, CLK_500Hz, end_game, end_time, end_round, end_FPGA, R1, R2, E1, E2, E3, E4, E5);
 end circuito;

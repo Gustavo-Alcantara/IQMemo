@@ -12,5 +12,6 @@ entity logica is port(
 end logica;
 		
 architecture behav of logica is
-	points <= 32*nivel + 4*('0' & bonus(2 downto 0)) + "00" & round(1 downto 0)  
+begin
+	points <= 32*nivel + 4*('0' & bonus(2 downto 0)) + "00" & round(1 downto 0);  
 end behav;

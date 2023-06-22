@@ -9,18 +9,19 @@ entity counter_round is port(
 		clock: in std_logic;
 		tc: out std_logic;
 		Q: out std_logic_vector(3 downto 0));
-		end counter_time;
+		end counter_round;
 		
-architecture arqct of counter_time is
-	signal round_reg: std_logic_vector(3 downto 0);
-	
+architecture arqct of counter_round is
+signal round_reg: std_logic_vector(3 downto 0);
+begin
 	process(clock, R)
 	begin
 		if R = '1' then
-			tempo_reg <= "0000"
+			tempo_reg <= "0000";
 		elsif (clk_1hz'event and clk_1hz ='1' and E ='1') then
-			round_reg <= round_reg + 1
+			round_reg <= round_reg + 1;
+		end if;
 	end process;
-	Q <= round_reg
+	Q <= round_reg;
 	tc <= '1' when round_reg = "1111" else '0';
-end arqct
+end arqct;

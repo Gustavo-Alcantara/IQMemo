@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
  
-component controle is
+entity controle is
 port(
 -- Entradas de controle
 	enter, reset, CLOCK: in std_logic;
@@ -10,7 +10,7 @@ port(
 -- Saídas de comandos
 	R1, R2, E1, E2, E3, E4, E5: out std_logic
 );
-end component;
+end controle;
 
 architecture bhv of controle is
     type STATES is (Init, Setup, Play_FPGA, Play_User, Count_round, Check, sWait, Result); 
@@ -32,7 +32,8 @@ begin
 		  when Init => R1 <= '1'; R2 <= '1'; E1 <= '0'; E2 <= '0'; E3 <= '0'; E4 <= '0'; E5 <= '0';
 				if reset ='1' then
 					PE <= Setup;
-				else PE <= Init;
+				elsif reset ='0' then PE <= Init;
+				end if;
 			
 		  when Setup => R1 <= '1'; R2 <= '0'; E1 <= '1'; E2 <= '1'; E3 <= '0'; E4 <= '0'; E5 <= '0';
 				if reset ='1' then
@@ -49,7 +50,7 @@ begin
 				elsif end_FPGA ='1' then
 					PE <= Play_User;
 				end if;
-				
+			
 			when Play_User => R1 <= '0'; R2 <= '0'; E1 <= '0'; E2 <= '0'; E3 <= '1'; E4 <= '0'; E5 <= '0';
 				if reset ='1' then
 					PE <= Setup;

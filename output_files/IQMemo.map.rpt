@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IQMemo
-Wed Jun 21 22:58:17 2023
+Wed Jun 21 23:22:44 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Jun 21 22:58:17 2023               ;
+; Analysis & Synthesis Status ; Failed - Wed Jun 21 23:22:44 2023               ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; IQMemo                                          ;
 ; Top-level Entity Name       ; topo                                            ;
@@ -155,7 +155,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 21 22:58:13 2023
+    Info: Processing started: Wed Jun 21 23:22:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IQMemo -c IQMemo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file topo.vhd
@@ -176,65 +176,38 @@ Info (12021): Found 2 design units, including 1 entities, in source file fsm_clo
 Info (12021): Found 2 design units, including 1 entities, in source file decoder_termometrico.vhd
     Info (12022): Found design unit 1: decoder_termometrico-arc_decoder
     Info (12023): Found entity 1: decoder_termometrico
-Error (10500): VHDL syntax error at datapath.vhd(286) near text "=";  expecting "(", or "'", or "." File: C:/Users/gusta/IQMemo/datapath.vhd Line: 286
-Error (10500): VHDL syntax error at datapath.vhd(286) near text ";";  expecting "<=" File: C:/Users/gusta/IQMemo/datapath.vhd Line: 286
-Info (12021): Found 0 design units, including 0 entities, in source file datapath.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-arc
+    Info (12023): Found entity 1: datapath
 Info (12021): Found 2 design units, including 1 entities, in source file d_code.vhd
     Info (12022): Found design unit 1: d_code-circuito
     Info (12023): Found entity 1: d_code
 Info (12021): Found 2 design units, including 1 entities, in source file buttonsync.vhd
     Info (12022): Found design unit 1: ButtonSync-ButtonSyncImpl
     Info (12023): Found entity 1: ButtonSync
-Error (10500): VHDL syntax error at subtrator.vhd(14) near text "resultado";  expecting "begin", or a declaration statement File: C:/Users/gusta/IQMemo/subtrator.vhd Line: 14
-Info (12021): Found 0 design units, including 0 entities, in source file subtrator.vhd
-Info (12021): Found 2 design units, including 1 entities, in source file reg4.vhd
-    Info (12022): Found design unit 1: registrador_sel-behv
-    Info (12023): Found entity 1: registrador_sel
-Error (10500): VHDL syntax error at Comp.vhd(14) near text "diferente";  expecting "begin", or a declaration statement File: C:/Users/gusta/IQMemo/Comp.vhd Line: 14
-Info (12021): Found 0 design units, including 0 entities, in source file comp.vhd
-Error (10500): VHDL syntax error at Result.vhd(15) near text "result";  expecting "begin", or a declaration statement File: C:/Users/gusta/IQMemo/Result.vhd Line: 15
-Info (12021): Found 0 design units, including 0 entities, in source file result.vhd
-Error (10500): VHDL syntax error at Counter_time.vhd(17) near text "process";  expecting "begin", or a declaration statement File: C:/Users/gusta/IQMemo/Counter_time.vhd Line: 17
-Error (10500): VHDL syntax error at Counter_time.vhd(21) near text "elsif";  expecting ";" File: C:/Users/gusta/IQMemo/Counter_time.vhd Line: 21
-Error (10500): VHDL syntax error at Counter_time.vhd(25) near text "tc";  expecting ";" File: C:/Users/gusta/IQMemo/Counter_time.vhd Line: 25
-Error (10522): VHDL Syntax error at Counter_time.vhd(26): experienced unexpected end-of-file ;  expecting ";" File: C:/Users/gusta/IQMemo/Counter_time.vhd Line: 26
-Info (12021): Found 0 design units, including 0 entities, in source file counter_time.vhd
-Error (10396): VHDL syntax error at Counter_round.vhd(12): name used in construct must match previously specified name "counter_round" File: C:/Users/gusta/IQMemo/Counter_round.vhd Line: 12
-Error (10523): Ignored construct counter_round at Counter_round.vhd(6) due to previous errors File: C:/Users/gusta/IQMemo/Counter_round.vhd Line: 6
-Error (10500): VHDL syntax error at Counter_round.vhd(17) near text "process";  expecting "begin", or a declaration statement File: C:/Users/gusta/IQMemo/Counter_round.vhd Line: 17
-Error (10500): VHDL syntax error at Counter_round.vhd(21) near text "elsif";  expecting ";" File: C:/Users/gusta/IQMemo/Counter_round.vhd Line: 21
-Error (10500): VHDL syntax error at Counter_round.vhd(25) near text "tc";  expecting ";" File: C:/Users/gusta/IQMemo/Counter_round.vhd Line: 25
-Error (10522): VHDL Syntax error at Counter_round.vhd(26): experienced unexpected end-of-file ;  expecting ";" File: C:/Users/gusta/IQMemo/Counter_round.vhd Line: 26
-Info (12021): Found 0 design units, including 0 entities, in source file counter_round.vhd
-Error (10500): VHDL syntax error at mux41.vhd(13) near text ":";  expecting ";", or ")" File: C:/Users/gusta/IQMemo/mux41.vhd Line: 13
-Info (12021): Found 0 design units, including 0 entities, in source file mux41.vhd
-Error (10500): VHDL syntax error at mux4132b.vhd(13) near text ":";  expecting ";", or ")" File: C:/Users/gusta/IQMemo/mux4132b.vhd Line: 13
-Info (12021): Found 0 design units, including 0 entities, in source file mux4132b.vhd
-Error (10500): VHDL syntax error at mux4115b.vhd(14) near text "architecture";  expecting "end", or "begin", or a declaration statement File: C:/Users/gusta/IQMemo/mux4115b.vhd Line: 14
-Error (10396): VHDL syntax error at mux4115b.vhd(20): name used in construct must match previously specified name "mux4x1_15bits" File: C:/Users/gusta/IQMemo/mux4115b.vhd Line: 20
-Error (10523): Ignored construct mux4x1_15bits at mux4115b.vhd(7) due to previous errors File: C:/Users/gusta/IQMemo/mux4115b.vhd Line: 7
-Info (12021): Found 0 design units, including 0 entities, in source file mux4115b.vhd
-Error (10500): VHDL syntax error at mux411b.vhd(13) near text "architecture";  expecting "end", or "begin", or a declaration statement File: C:/Users/gusta/IQMemo/mux411b.vhd Line: 13
-Error (10396): VHDL syntax error at mux411b.vhd(19): name used in construct must match previously specified name "mux4x1_1bit" File: C:/Users/gusta/IQMemo/mux411b.vhd Line: 19
-Error (10523): Ignored construct mux4x1_1bit at mux411b.vhd(7) due to previous errors File: C:/Users/gusta/IQMemo/mux411b.vhd Line: 7
-Info (12021): Found 0 design units, including 0 entities, in source file mux411b.vhd
-Error (10396): VHDL syntax error at dec7seg.vhd(7): name used in construct must match previously specified name "dec7seg" File: C:/Users/gusta/IQMemo/dec7seg.vhd Line: 7
-Error (10523): Ignored construct dec7seg at dec7seg.vhd(3) due to previous errors File: C:/Users/gusta/IQMemo/dec7seg.vhd Line: 3
-Info (12021): Found 0 design units, including 0 entities, in source file dec7seg.vhd
-Error (10500): VHDL syntax error at mux217b.vhd(13) near text "architecture";  expecting "end", or "begin", or a declaration statement File: C:/Users/gusta/IQMemo/mux217b.vhd Line: 13
-Error (10396): VHDL syntax error at mux217b.vhd(17): name used in construct must match previously specified name "mux2x1_7bits" File: C:/Users/gusta/IQMemo/mux217b.vhd Line: 17
-Error (10523): Ignored construct mux2x1_7bits at mux217b.vhd(7) due to previous errors File: C:/Users/gusta/IQMemo/mux217b.vhd Line: 7
-Info (12021): Found 0 design units, including 0 entities, in source file mux217b.vhd
-Error (10500): VHDL syntax error at controle.vhd(4) near text "component";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: C:/Users/gusta/IQMemo/controle.vhd Line: 4
-Error (10500): VHDL syntax error at controle.vhd(37) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/gusta/IQMemo/controle.vhd Line: 37
-Error (10500): VHDL syntax error at controle.vhd(46) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/gusta/IQMemo/controle.vhd Line: 46
-Error (10500): VHDL syntax error at controle.vhd(53) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/gusta/IQMemo/controle.vhd Line: 53
-Error (10500): VHDL syntax error at controle.vhd(62) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/gusta/IQMemo/controle.vhd Line: 62
-Error (10500): VHDL syntax error at controle.vhd(68) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/gusta/IQMemo/controle.vhd Line: 68
-Error (10500): VHDL syntax error at controle.vhd(76) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/gusta/IQMemo/controle.vhd Line: 76
-Error (10500): VHDL syntax error at controle.vhd(82) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/gusta/IQMemo/controle.vhd Line: 82
-Error (10500): VHDL syntax error at controle.vhd(91) near text "case";  expecting "if" File: C:/Users/gusta/IQMemo/controle.vhd Line: 91
-Info (12021): Found 0 design units, including 0 entities, in source file controle.vhd
+Warning (12019): Can't analyze file -- file subtrator.vhd is missing
+Warning (12019): Can't analyze file -- file Reg4.vhd is missing
+Warning (12019): Can't analyze file -- file Comp.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file result.vhd
+    Info (12022): Found design unit 1: result-behav
+    Info (12023): Found entity 1: result
+Info (12021): Found 2 design units, including 1 entities, in source file counter_time.vhd
+    Info (12022): Found design unit 1: counter_time-arqct
+    Info (12023): Found entity 1: counter_time
+Info (12021): Found 2 design units, including 1 entities, in source file counter_round.vhd
+    Info (12022): Found design unit 1: counter_round-arqct
+    Info (12023): Found entity 1: counter_round
+Warning (12019): Can't analyze file -- file mux41.vhd is missing
+Warning (12019): Can't analyze file -- file mux4132b.vhd is missing
+Warning (12019): Can't analyze file -- file mux4115b.vhd is missing
+Warning (12019): Can't analyze file -- file mux411b.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file dec7seg.vhd
+    Info (12022): Found design unit 1: dec7seg-decoder
+    Info (12023): Found entity 1: dec7seg
+Warning (12019): Can't analyze file -- file mux217b.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file controle.vhd
+    Info (12022): Found design unit 1: controle-bhv
+    Info (12023): Found entity 1: controle
 Info (12021): Found 2 design units, including 1 entities, in source file mux2x1_7bits.vhd
     Info (12022): Found design unit 1: mux2x1_7bits-aqtmux
     Info (12023): Found entity 1: mux2x1_7bits
@@ -247,27 +220,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux4x1_
 Info (12021): Found 2 design units, including 1 entities, in source file mux4x1_32bits.vhd
     Info (12022): Found design unit 1: mux4x1_32bits-aqtmux
     Info (12023): Found entity 1: mux4x1_32bits
-Error (10500): VHDL syntax error at logica.vhd(15) near text "points";  expecting "begin", or a declaration statement File: C:/Users/gusta/IQMemo/logica.vhd Line: 15
-Info (12021): Found 0 design units, including 0 entities, in source file logica.vhd
-Error (10430): VHDL Primary Unit Declaration error at registrador_sel.vhd(4): primary unit "registrador_sel" already exists in library "work" File: C:/Users/gusta/IQMemo/registrador_sel.vhd Line: 4
-Error (10784): HDL error at Reg4.vhd(4): see declaration for object "registrador_sel" File: C:/Users/gusta/IQMemo/Reg4.vhd Line: 4
-Info (12021): Found 0 design units, including 0 entities, in source file registrador_sel.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file logica.vhd
+    Info (12022): Found design unit 1: logica-behav
+    Info (12023): Found entity 1: logica
+Info (12021): Found 2 design units, including 1 entities, in source file registrador_sel.vhd
+    Info (12022): Found design unit 1: registrador_sel-behv
+    Info (12023): Found entity 1: registrador_sel
 Info (12021): Found 2 design units, including 1 entities, in source file registrador_user.vhd
     Info (12022): Found design unit 1: registrador_user-behv
     Info (12023): Found entity 1: registrador_user
 Info (12021): Found 2 design units, including 1 entities, in source file registrador_bonus.vhd
     Info (12022): Found design unit 1: registrador_bonus-behv
     Info (12023): Found entity 1: registrador_bonus
-Error (10430): VHDL Primary Unit Declaration error at COMP_erro.vhd(7): primary unit "COMP_erro" already exists in library "work" File: C:/Users/gusta/IQMemo/COMP_erro.vhd Line: 7
-Error (10784): HDL error at Comp.vhd(7): see declaration for object "COMP_erro" File: C:/Users/gusta/IQMemo/Comp.vhd Line: 7
-Error (10500): VHDL syntax error at COMP_erro.vhd(14) near text "diferente";  expecting "begin", or a declaration statement File: C:/Users/gusta/IQMemo/COMP_erro.vhd Line: 14
-Info (12021): Found 0 design units, including 0 entities, in source file comp_erro.vhd
-Error (10500): VHDL syntax error at COMP_end.vhd(14) near text "endgame";  expecting "begin", or a declaration statement File: C:/Users/gusta/IQMemo/COMP_end.vhd Line: 14
-Info (12021): Found 0 design units, including 0 entities, in source file comp_end.vhd
-Error (10430): VHDL Primary Unit Declaration error at subtracao.vhd(6): primary unit "subtracao" already exists in library "work" File: C:/Users/gusta/IQMemo/subtracao.vhd Line: 6
-Error (10784): HDL error at subtrator.vhd(6): see declaration for object "subtracao" File: C:/Users/gusta/IQMemo/subtrator.vhd Line: 6
-Error (10500): VHDL syntax error at subtracao.vhd(14) near text "resultado";  expecting "begin", or a declaration statement File: C:/Users/gusta/IQMemo/subtracao.vhd Line: 14
-Info (12021): Found 0 design units, including 0 entities, in source file subtracao.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file comp_erro.vhd
+    Info (12022): Found design unit 1: COMP_erro-behav
+    Info (12023): Found entity 1: COMP_erro
+Info (12021): Found 2 design units, including 1 entities, in source file comp_end.vhd
+    Info (12022): Found design unit 1: COMP_end-behav
+    Info (12023): Found entity 1: COMP_end
+Info (12021): Found 2 design units, including 1 entities, in source file subtracao.vhd
+    Info (12022): Found design unit 1: subtracao-behav
+    Info (12023): Found entity 1: subtracao
 Info (12021): Found 2 design units, including 1 entities, in source file rom1.vhd
     Info (12022): Found design unit 1: ROM1-arc_ROM1
     Info (12023): Found entity 1: ROM1
@@ -280,16 +253,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file rom3.vh
 Info (12021): Found 2 design units, including 1 entities, in source file rom1a.vhd
     Info (12022): Found design unit 1: ROM1a-arc_ROM1a
     Info (12023): Found entity 1: ROM1a
-Error (10430): VHDL Primary Unit Declaration error at ROM2a.vhd(5): primary unit "ROM1a" already exists in library "work" File: C:/Users/gusta/IQMemo/ROM2a.vhd Line: 5
-Error (10784): HDL error at ROM1a.vhd(5): see declaration for object "ROM1a" File: C:/Users/gusta/IQMemo/ROM1a.vhd Line: 5
-Info (12021): Found 0 design units, including 0 entities, in source file rom2a.vhd
-Error (10430): VHDL Primary Unit Declaration error at ROM3a.vhd(5): primary unit "ROM1a" already exists in library "work" File: C:/Users/gusta/IQMemo/ROM3a.vhd Line: 5
-Error (10784): HDL error at ROM1a.vhd(5): see declaration for object "ROM1a" File: C:/Users/gusta/IQMemo/ROM1a.vhd Line: 5
-Info (12021): Found 0 design units, including 0 entities, in source file rom3a.vhd
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 51 errors, 1 warning
+Info (12021): Found 2 design units, including 1 entities, in source file rom2a.vhd
+    Info (12022): Found design unit 1: ROM2a-arc_ROM2a
+    Info (12023): Found entity 1: ROM2a
+Info (12021): Found 2 design units, including 1 entities, in source file rom3a.vhd
+    Info (12022): Found design unit 1: ROM3aa-arc_ROM3a
+    Info (12023): Found entity 1: ROM3a
+Error (10777): VHDL error at datapath.vhd(278): expected an architecture identifier in index File: C:/Users/gusta/IQMemo/datapath.vhd Line: 278
+Error (10346): VHDL error at datapath.vhd(278): formal port or parameter "round" must have actual or default value File: C:/Users/gusta/IQMemo/datapath.vhd Line: 278
+Error (10784): HDL error at datapath.vhd(199): see declaration for object "round" File: C:/Users/gusta/IQMemo/datapath.vhd Line: 199
+Error (10346): VHDL error at datapath.vhd(278): formal port or parameter "bonus" must have actual or default value File: C:/Users/gusta/IQMemo/datapath.vhd Line: 278
+Error (10784): HDL error at datapath.vhd(199): see declaration for object "bonus" File: C:/Users/gusta/IQMemo/datapath.vhd Line: 199
+Error (10346): VHDL error at datapath.vhd(278): formal port or parameter "nivel" must have actual or default value File: C:/Users/gusta/IQMemo/datapath.vhd Line: 278
+Error (10784): HDL error at datapath.vhd(200): see declaration for object "nivel" File: C:/Users/gusta/IQMemo/datapath.vhd Line: 200
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 7 errors, 9 warnings
     Error: Peak virtual memory: 4665 megabytes
-    Error: Processing ended: Wed Jun 21 22:58:17 2023
-    Error: Elapsed time: 00:00:04
+    Error: Processing ended: Wed Jun 21 23:22:44 2023
+    Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
 

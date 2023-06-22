@@ -11,5 +11,6 @@ entity COMP_erro is port(
 end COMP_erro;
 		
 architecture behav of COMP_erro is
+begin
 		diferente <= '0' when E0 = E1 else '1';
-end behav
+end behav;

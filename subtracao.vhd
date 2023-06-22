@@ -11,5 +11,6 @@ entity subtracao is port(
 			end subtracao;
 
 architecture behav of subtracao is
+begin
 	resultado <= E0 - E1;
-end behav
+end behav;
