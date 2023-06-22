@@ -68,3 +68,24 @@ set_global_assignment -name VHDL_FILE mux411b.vhd
 set_global_assignment -name VHDL_FILE dec7seg.vhd
 set_global_assignment -name VHDL_FILE mux217b.vhd
 set_global_assignment -name VHDL_FILE controle.vhd
+set_global_assignment -name VHDL_FILE mux2x1_7bits.vhd
+set_global_assignment -name VHDL_FILE mux4x1_1bit.vhd
+set_global_assignment -name VHDL_FILE mux4x1_15bits.vhd
+set_global_assignment -name VHDL_FILE mux4x1_32bits.vhd
+set_global_assignment -name VHDL_FILE logica.vhd
+set_global_assignment -name VHDL_FILE registrador_sel.vhd
+set_global_assignment -name VHDL_FILE registrador_user.vhd
+set_global_assignment -name VHDL_FILE registrador_bonus.vhd
+set_global_assignment -name VHDL_FILE COMP_erro.vhd
+set_global_assignment -name VHDL_FILE COMP_end.vhd
+set_global_assignment -name VHDL_FILE subtracao.vhd
+set_global_assignment -name VHDL_FILE ROM1.vhd
+set_global_assignment -name VHDL_FILE ROM2.vhd
+set_global_assignment -name VHDL_FILE ROM3.vhd
+set_global_assignment -name VHDL_FILE ROM1a.vhd
+set_global_assignment -name VHDL_FILE ROM2a.vhd
+set_global_assignment -name VHDL_FILE ROM3a.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
