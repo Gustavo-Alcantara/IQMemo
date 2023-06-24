@@ -17,8 +17,8 @@ begin
 	process(clock, R)
 	begin
 		if R = '1' then
-			tempo_reg <= "0000";
-		elsif (clk_1hz'event and clk_1hz ='1' and E ='1') then
+			round_reg <= "0000";
+		elsif (clock'event and clock ='1' and E ='1') then
 			round_reg <= round_reg + 1;
 		end if;
 	end process;

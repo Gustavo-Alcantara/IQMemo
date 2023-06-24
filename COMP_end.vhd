@@ -2,7 +2,6 @@ library ieee;
 use ieee.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
-use ieee.std_logic_vector.all;
 
 entity COMP_end is port(
 	E0: in std_logic_vector(3 downto 0);

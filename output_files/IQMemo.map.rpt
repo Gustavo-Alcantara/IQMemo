@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IQMemo
-Wed Jun 21 23:22:44 2023
+Fri Jun 23 21:55:47 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,35 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |topo|controle:Ctrl|EA
+  9. State Machine - |topo|ButtonSync:BS1|BTN0_state
+ 10. State Machine - |topo|ButtonSync:BS1|BTN1_state
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux21"
+ 17. Port Connectivity Checks: "datapath:Dt|decod7seg:Dec5"
+ 18. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux20"
+ 19. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux11"
+ 20. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux19"
+ 21. Port Connectivity Checks: "datapath:Dt|decod7seg:Dec4"
+ 22. Port Connectivity Checks: "datapath:Dt|d_code:Dcod6"
+ 23. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux18"
+ 24. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux9"
+ 25. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux17"
+ 26. Port Connectivity Checks: "datapath:Dt|decod7seg:Dec3"
+ 27. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux16"
+ 28. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux7"
+ 29. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux15"
+ 30. Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux14"
+ 31. Port Connectivity Checks: "datapath:Dt|mux2x1_16bits:Mux13"
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -33,22 +61,29 @@ applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Jun 21 23:22:44 2023               ;
-; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name               ; IQMemo                                          ;
-; Top-level Entity Name       ; topo                                            ;
-; Family                      ; Cyclone V                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++-------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status         ; Successful - Fri Jun 23 21:55:47 2023           ;
+; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                       ; IQMemo                                          ;
+; Top-level Entity Name               ; topo                                            ;
+; Family                              ; Cyclone V                                       ;
+; Logic utilization (in ALMs)         ; N/A                                             ;
+; Total registers                     ; 106                                             ;
+; Total pins                          ; 94                                              ;
+; Total virtual pins                  ; 0                                               ;
+; Total block memory bits             ; 0                                               ;
+; Total DSP Blocks                    ; 0                                               ;
+; Total HSSI RX PCSs                  ; 0                                               ;
+; Total HSSI PMA RX Deserializers     ; 0                                               ;
+; Total HSSI PMA RX ATT Deserializers ; 0                                               ;
+; Total HSSI TX PCSs                  ; 0                                               ;
+; Total HSSI PMA TX Serializers       ; 0                                               ;
+; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
+; Total PLLs                          ; 0                                               ;
+; Total DLLs                          ; 0                                               ;
++-------------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -149,13 +184,367 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------+---------+
+; topo.vhd                         ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/topo.vhd                 ;         ;
+; FSM_clock_emu.vhd                ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/FSM_clock_emu.vhd        ;         ;
+; decoder_termometrico.vhd         ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/decoder_termometrico.vhd ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/datapath.vhd             ;         ;
+; d_code.vhd                       ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/d_code.vhd               ;         ;
+; ButtonSync.vhd                   ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/ButtonSync.vhd           ;         ;
+; Counter_time.vhd                 ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/Counter_time.vhd         ;         ;
+; Counter_round.vhd                ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/Counter_round.vhd        ;         ;
+; controle.vhd                     ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/controle.vhd             ;         ;
+; mux2x1_7bits.vhd                 ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/mux2x1_7bits.vhd         ;         ;
+; mux4x1_1bit.vhd                  ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/mux4x1_1bit.vhd          ;         ;
+; mux4x1_15bits.vhd                ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/mux4x1_15bits.vhd        ;         ;
+; mux4x1_32bits.vhd                ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/mux4x1_32bits.vhd        ;         ;
+; logica.vhd                       ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/logica.vhd               ;         ;
+; registrador_sel.vhd              ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/registrador_sel.vhd      ;         ;
+; registrador_user.vhd             ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/registrador_user.vhd     ;         ;
+; registrador_bonus.vhd            ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/registrador_bonus.vhd    ;         ;
+; COMP_erro.vhd                    ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/COMP_erro.vhd            ;         ;
+; COMP_end.vhd                     ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/COMP_end.vhd             ;         ;
+; subtracao.vhd                    ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/subtracao.vhd            ;         ;
+; mux2x1_16bits.vhd                ; yes             ; User VHDL File        ; C:/Users/gusta/IQMemo/mux2x1_16bits.vhd        ;         ;
+; decod7seg.vhd                    ; yes             ; Auto-Found VHDL File  ; C:/Users/gusta/IQMemo/decod7seg.vhd            ;         ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                            ;
++---------------------------------------------+------------------------------------------+
+; Resource                                    ; Usage                                    ;
++---------------------------------------------+------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 101                                      ;
+;                                             ;                                          ;
+; Combinational ALUT usage for logic          ; 182                                      ;
+;     -- 7 input functions                    ; 3                                        ;
+;     -- 6 input functions                    ; 14                                       ;
+;     -- 5 input functions                    ; 33                                       ;
+;     -- 4 input functions                    ; 30                                       ;
+;     -- <=3 input functions                  ; 102                                      ;
+;                                             ;                                          ;
+; Dedicated logic registers                   ; 106                                      ;
+;                                             ;                                          ;
+; I/O pins                                    ; 94                                       ;
+; Total DSP Blocks                            ; 0                                        ;
+; Maximum fan-out node                        ; datapath:Dt|FSM_clock_emu:FSM1|CLK_025Hz ;
+; Maximum fan-out                             ; 91                                       ;
+; Total fan-out                               ; 1215                                     ;
+; Average fan-out                             ; 2.55                                     ;
++---------------------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                        ;
++------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Library Name ;
++------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------+--------------+
+; |topo                              ; 182 (0)           ; 106 (0)      ; 0                 ; 0          ; 94   ; 0            ; |topo                                        ; work         ;
+;    |ButtonSync:BS1|                ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |topo|ButtonSync:BS1                         ; work         ;
+;    |controle:Ctrl|                 ; 22 (22)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |topo|controle:Ctrl                          ; work         ;
+;    |datapath:Dt|                   ; 156 (2)           ; 94 (0)       ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt                            ; work         ;
+;       |COMP_erro:Comp2|            ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|COMP_erro:Comp2            ; work         ;
+;       |FSM_clock_emu:FSM1|         ; 75 (75)           ; 65 (65)      ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|FSM_clock_emu:FSM1         ; work         ;
+;       |counter_round:Cr|           ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|counter_round:Cr           ; work         ;
+;       |counter_time:Ct|            ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|counter_time:Ct            ; work         ;
+;       |decoder_termometrico:DECT1| ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|decoder_termometrico:DECT1 ; work         ;
+;       |decoder_termometrico:DECT2| ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|decoder_termometrico:DECT2 ; work         ;
+;       |mux2x1_16bits:Mux4|         ; 28 (28)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|mux2x1_16bits:Mux4         ; work         ;
+;       |mux2x1_7bits:Mux14|         ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|mux2x1_7bits:Mux14         ; work         ;
+;       |mux2x1_7bits:Mux15|         ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|mux2x1_7bits:Mux15         ; work         ;
+;       |mux2x1_7bits:Mux17|         ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|mux2x1_7bits:Mux17         ; work         ;
+;       |mux2x1_7bits:Mux19|         ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|mux2x1_7bits:Mux19         ; work         ;
+;       |mux2x1_7bits:Mux21|         ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|mux2x1_7bits:Mux21         ; work         ;
+;       |registrador_bonus:Reg3|     ; 1 (1)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|registrador_bonus:Reg3     ; work         ;
+;       |registrador_sel:Reg1|       ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|registrador_sel:Reg1       ; work         ;
+;       |registrador_user:Reg2|      ; 0 (0)             ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|registrador_user:Reg2      ; work         ;
+;       |subtracao:Sub1|             ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|datapath:Dt|subtracao:Sub1             ; work         ;
++------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------+
+; State Machine - |topo|controle:Ctrl|EA                                                                               ;
++----------------+-----------+----------+----------+----------------+--------------+--------------+----------+---------+
+; Name           ; EA.Result ; EA.sWait ; EA.Check ; EA.Count_round ; EA.Play_User ; EA.Play_FPGA ; EA.Setup ; EA.Init ;
++----------------+-----------+----------+----------+----------------+--------------+--------------+----------+---------+
+; EA.Init        ; 0         ; 0        ; 0        ; 0              ; 0            ; 0            ; 0        ; 0       ;
+; EA.Setup       ; 0         ; 0        ; 0        ; 0              ; 0            ; 0            ; 1        ; 1       ;
+; EA.Play_FPGA   ; 0         ; 0        ; 0        ; 0              ; 0            ; 1            ; 0        ; 1       ;
+; EA.Play_User   ; 0         ; 0        ; 0        ; 0              ; 1            ; 0            ; 0        ; 1       ;
+; EA.Count_round ; 0         ; 0        ; 0        ; 1              ; 0            ; 0            ; 0        ; 1       ;
+; EA.Check       ; 0         ; 0        ; 1        ; 0              ; 0            ; 0            ; 0        ; 1       ;
+; EA.sWait       ; 0         ; 1        ; 0        ; 0              ; 0            ; 0            ; 0        ; 1       ;
+; EA.Result      ; 1         ; 0        ; 0        ; 0              ; 0            ; 0            ; 0        ; 1       ;
++----------------+-----------+----------+----------+----------------+--------------+--------------+----------+---------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------+
+; State Machine - |topo|ButtonSync:BS1|BTN0_state                                                       ;
++--------------------------+-------------------------+-----------------------+--------------------------+
+; Name                     ; BTN0_state.EsperaSoltar ; BTN0_state.SaidaAtiva ; BTN0_state.EsperaApertar ;
++--------------------------+-------------------------+-----------------------+--------------------------+
+; BTN0_state.EsperaApertar ; 0                       ; 0                     ; 0                        ;
+; BTN0_state.SaidaAtiva    ; 0                       ; 1                     ; 1                        ;
+; BTN0_state.EsperaSoltar  ; 1                       ; 0                     ; 1                        ;
++--------------------------+-------------------------+-----------------------+--------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------+
+; State Machine - |topo|ButtonSync:BS1|BTN1_state                                                       ;
++--------------------------+-------------------------+-----------------------+--------------------------+
+; Name                     ; BTN1_state.EsperaSoltar ; BTN1_state.SaidaAtiva ; BTN1_state.EsperaApertar ;
++--------------------------+-------------------------+-----------------------+--------------------------+
+; BTN1_state.EsperaApertar ; 0                       ; 0                     ; 0                        ;
+; BTN1_state.SaidaAtiva    ; 0                       ; 1                     ; 1                        ;
+; BTN1_state.EsperaSoltar  ; 1                       ; 0                     ; 1                        ;
++--------------------------+-------------------------+-----------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                   ;
++----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal     ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------+------------------------+
+; controle:Ctrl|PE.Play_FPGA_327                     ; controle:Ctrl|Selector1 ; yes                    ;
+; controle:Ctrl|PE.Setup_343                         ; controle:Ctrl|Selector1 ; yes                    ;
+; controle:Ctrl|PE.Play_User_311                     ; controle:Ctrl|Selector1 ; yes                    ;
+; controle:Ctrl|PE.Result_247                        ; controle:Ctrl|Selector1 ; yes                    ;
+; controle:Ctrl|PE.Init_359                          ; controle:Ctrl|Selector1 ; yes                    ;
+; controle:Ctrl|PE.Count_round_295                   ; controle:Ctrl|Selector1 ; yes                    ;
+; controle:Ctrl|PE.sWait_263                         ; controle:Ctrl|Selector1 ; yes                    ;
+; controle:Ctrl|PE.Check_279                         ; controle:Ctrl|Selector1 ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                         ;                        ;
++----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------+
+; Registers Removed During Synthesis                           ;
++-----------------------------------------+--------------------+
+; Register name                           ; Reason for Removal ;
++-----------------------------------------+--------------------+
+; datapath:Dt|registrador_sel:Reg1|Q[2,3] ; Lost fanout        ;
+; ButtonSync:BS1|BTN0_state.EsperaSoltar  ; Lost fanout        ;
+; ButtonSync:BS1|BTN1_state.EsperaSoltar  ; Lost fanout        ;
+; Total Number of Removed Registers = 4   ;                    ;
++-----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 106   ;
+; Number of registers using Synchronous Clear  ; 60    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 89    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 87    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; datapath:Dt|registrador_bonus:Reg3|Q[3]  ; 14      ;
+; datapath:Dt|counter_time:Ct|tempo_reg[3] ; 2       ;
+; datapath:Dt|counter_time:Ct|tempo_reg[1] ; 4       ;
+; Total number of inverted registers = 3   ;         ;
++------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |topo|datapath:Dt|decod7seg:Dec2|F[4]         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |topo|datapath:Dt|mux2x1_7bits:Mux19|saida[5] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |topo|datapath:Dt|mux2x1_7bits:Mux17|saida[6] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |topo|datapath:Dt|decod7seg:Dec2|F[5]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux21" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; e1   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|decod7seg:Dec5" ;
++---------+-------+----------+---------------------------+
+; Port    ; Type  ; Severity ; Details                   ;
++---------+-------+----------+---------------------------+
+; c[3..2] ; Input ; Info     ; Stuck at GND              ;
++---------+-------+----------+---------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux20" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; e1   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux11" ;
++----------+-------+----------+------------------------------+
+; Port     ; Type  ; Severity ; Details                      ;
++----------+-------+----------+------------------------------+
+; e1[2..0] ; Input ; Info     ; Stuck at VCC                 ;
+; e1[5..3] ; Input ; Info     ; Stuck at GND                 ;
+; e1[6]    ; Input ; Info     ; Stuck at VCC                 ;
++----------+-------+----------+------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux19" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; e1   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|decod7seg:Dec4"                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; c[3..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; f       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|d_code:Dcod6"                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; f    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux18" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; e1   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux9" ;
++----------+-------+----------+-----------------------------+
+; Port     ; Type  ; Severity ; Details                     ;
++----------+-------+----------+-----------------------------+
+; e1[2..1] ; Input ; Info     ; Stuck at VCC                ;
+; e1[5..3] ; Input ; Info     ; Stuck at GND                ;
+; e1[6]    ; Input ; Info     ; Stuck at VCC                ;
+; e1[0]    ; Input ; Info     ; Stuck at GND                ;
++----------+-------+----------+-----------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux17" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; e1   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|decod7seg:Dec3"                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; f    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux16" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; e1   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux7" ;
++----------+-------+----------+-----------------------------+
+; Port     ; Type  ; Severity ; Details                     ;
++----------+-------+----------+-----------------------------+
+; e1[2..0] ; Input ; Info     ; Stuck at VCC                ;
+; e1[6..3] ; Input ; Info     ; Stuck at GND                ;
++----------+-------+----------+-----------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux15" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; e1   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_7bits:Mux14" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; e1   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:Dt|mux2x1_16bits:Mux13" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; e1   ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 21 23:22:43 2023
+    Info: Processing started: Fri Jun 23 21:55:36 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IQMemo -c IQMemo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file topo.vhd
@@ -201,9 +590,7 @@ Warning (12019): Can't analyze file -- file mux41.vhd is missing
 Warning (12019): Can't analyze file -- file mux4132b.vhd is missing
 Warning (12019): Can't analyze file -- file mux4115b.vhd is missing
 Warning (12019): Can't analyze file -- file mux411b.vhd is missing
-Info (12021): Found 2 design units, including 1 entities, in source file dec7seg.vhd
-    Info (12022): Found design unit 1: dec7seg-decoder
-    Info (12023): Found entity 1: dec7seg
+Warning (12019): Can't analyze file -- file dec7seg.vhd is missing
 Warning (12019): Can't analyze file -- file mux217b.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file controle.vhd
     Info (12022): Found design unit 1: controle-bhv
@@ -257,19 +644,105 @@ Info (12021): Found 2 design units, including 1 entities, in source file rom2a.v
     Info (12022): Found design unit 1: ROM2a-arc_ROM2a
     Info (12023): Found entity 1: ROM2a
 Info (12021): Found 2 design units, including 1 entities, in source file rom3a.vhd
-    Info (12022): Found design unit 1: ROM3aa-arc_ROM3a
+    Info (12022): Found design unit 1: ROM3a-arc_ROM3a
     Info (12023): Found entity 1: ROM3a
-Error (10777): VHDL error at datapath.vhd(278): expected an architecture identifier in index File: C:/Users/gusta/IQMemo/datapath.vhd Line: 278
-Error (10346): VHDL error at datapath.vhd(278): formal port or parameter "round" must have actual or default value File: C:/Users/gusta/IQMemo/datapath.vhd Line: 278
-Error (10784): HDL error at datapath.vhd(199): see declaration for object "round" File: C:/Users/gusta/IQMemo/datapath.vhd Line: 199
-Error (10346): VHDL error at datapath.vhd(278): formal port or parameter "bonus" must have actual or default value File: C:/Users/gusta/IQMemo/datapath.vhd Line: 278
-Error (10784): HDL error at datapath.vhd(199): see declaration for object "bonus" File: C:/Users/gusta/IQMemo/datapath.vhd Line: 199
-Error (10346): VHDL error at datapath.vhd(278): formal port or parameter "nivel" must have actual or default value File: C:/Users/gusta/IQMemo/datapath.vhd Line: 278
-Error (10784): HDL error at datapath.vhd(200): see declaration for object "nivel" File: C:/Users/gusta/IQMemo/datapath.vhd Line: 200
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 7 errors, 9 warnings
-    Error: Peak virtual memory: 4665 megabytes
-    Error: Processing ended: Wed Jun 21 23:22:44 2023
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12021): Found 2 design units, including 1 entities, in source file mux2x1_16bits.vhd
+    Info (12022): Found design unit 1: mux2x1_16bits-aqtmux
+    Info (12023): Found entity 1: mux2x1_16bits
+Info (12127): Elaborating entity "topo" for the top level hierarchy
+Info (12128): Elaborating entity "ButtonSync" for hierarchy "ButtonSync:BS1"
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:Dt"
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(49): object "sdec4" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(49): object "sdecod2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(49): object "sdec2" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(53): used implicit default value for signal "srom0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(53): used implicit default value for signal "srom1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(53): used implicit default value for signal "srom2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(53): used implicit default value for signal "srom3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(54): used implicit default value for signal "srom0a" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(54): used implicit default value for signal "srom1a" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(54): used implicit default value for signal "srom2a" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(54): used implicit default value for signal "srom3a" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "counter_time" for hierarchy "datapath:Dt|counter_time:Ct"
+Warning (10492): VHDL Process Statement warning at Counter_time.vhd(21): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "counter_round" for hierarchy "datapath:Dt|counter_round:Cr"
+Warning (10492): VHDL Process Statement warning at Counter_round.vhd(21): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "FSM_clock_emu" for hierarchy "datapath:Dt|FSM_clock_emu:FSM1"
+Info (12128): Elaborating entity "mux4x1_1bit" for hierarchy "datapath:Dt|mux4x1_1bit:Mux1"
+Info (12128): Elaborating entity "registrador_sel" for hierarchy "datapath:Dt|registrador_sel:Reg1"
+Info (12128): Elaborating entity "registrador_user" for hierarchy "datapath:Dt|registrador_user:Reg2"
+Info (12128): Elaborating entity "subtracao" for hierarchy "datapath:Dt|subtracao:Sub1"
+Info (12128): Elaborating entity "registrador_bonus" for hierarchy "datapath:Dt|registrador_bonus:Reg3"
+Info (12128): Elaborating entity "COMP_end" for hierarchy "datapath:Dt|COMP_end:Comp1"
+Info (12128): Elaborating entity "COMP_erro" for hierarchy "datapath:Dt|COMP_erro:Comp2"
+Info (12128): Elaborating entity "mux4x1_15bits" for hierarchy "datapath:Dt|mux4x1_15bits:Mux2"
+Info (12128): Elaborating entity "mux4x1_32bits" for hierarchy "datapath:Dt|mux4x1_32bits:Mux3"
+Info (12128): Elaborating entity "logica" for hierarchy "datapath:Dt|logica:LC"
+Info (12128): Elaborating entity "decoder_termometrico" for hierarchy "datapath:Dt|decoder_termometrico:DECT1"
+Info (12128): Elaborating entity "mux2x1_16bits" for hierarchy "datapath:Dt|mux2x1_16bits:Mux13"
+Info (12128): Elaborating entity "d_code" for hierarchy "datapath:Dt|d_code:Dcod1"
+Warning (12125): Using design file decod7seg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: decod7seg-decoder
+    Info (12023): Found entity 1: decod7seg
+Info (12128): Elaborating entity "decod7seg" for hierarchy "datapath:Dt|decod7seg:Dec1"
+Info (12128): Elaborating entity "mux2x1_7bits" for hierarchy "datapath:Dt|mux2x1_7bits:Mux5"
+Info (12128): Elaborating entity "controle" for hierarchy "controle:Ctrl"
+Warning (10492): VHDL Process Statement warning at controle.vhd(41): signal "enter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(43): signal "enter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(50): signal "end_FPGA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(57): signal "enter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(59): signal "end_time" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(72): signal "end_FPGA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(72): signal "end_game" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(72): signal "end_time" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(72): signal "end_round" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(86): signal "enter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controle.vhd(88): signal "enter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at controle.vhd(27): inferring latch(es) for signal or variable "PE", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "PE.Result" at controle.vhd(27)
+Info (10041): Inferred latch for "PE.sWait" at controle.vhd(27)
+Info (10041): Inferred latch for "PE.Check" at controle.vhd(27)
+Info (10041): Inferred latch for "PE.Count_round" at controle.vhd(27)
+Info (10041): Inferred latch for "PE.Play_User" at controle.vhd(27)
+Info (10041): Inferred latch for "PE.Play_FPGA" at controle.vhd(27)
+Info (10041): Inferred latch for "PE.Setup" at controle.vhd(27)
+Info (10041): Inferred latch for "PE.Init" at controle.vhd(27)
+Warning (13012): Latch controle:Ctrl|PE.Play_FPGA_327 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ButtonSync:BS1|BTN0_state.SaidaAtiva
+Warning (13012): Latch controle:Ctrl|PE.Setup_343 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ButtonSync:BS1|BTN0_state.SaidaAtiva
+Warning (13012): Latch controle:Ctrl|PE.Play_User_311 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle:Ctrl|EA.Play_FPGA
+Warning (13012): Latch controle:Ctrl|PE.Result_247 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ButtonSync:BS1|BTN0_state.SaidaAtiva
+Warning (13012): Latch controle:Ctrl|PE.Init_359 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ButtonSync:BS1|BTN0_state.SaidaAtiva
+Warning (13012): Latch controle:Ctrl|PE.Count_round_295 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle:Ctrl|EA.Play_User
+Warning (13012): Latch controle:Ctrl|PE.sWait_263 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ButtonSync:BS1|BTN0_state.SaidaAtiva
+Warning (13012): Latch controle:Ctrl|PE.Check_279 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ButtonSync:BS1|BTN0_state.SaidaAtiva
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "LEDR[15]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+Info (21057): Implemented 305 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 72 output pins
+    Info (21061): Implemented 211 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 4684 megabytes
+    Info: Processing ended: Fri Jun 23 21:55:47 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:03
 
 

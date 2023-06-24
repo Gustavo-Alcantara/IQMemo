@@ -1,11 +1,11 @@
 library IEEE;
 use IEEE.Std_Logic_1164.all;
-entity dec7seg is
+entity decod7seg is
 port (C:  in std_logic_vector(3 downto 0);
       F:  out std_logic_vector(6 downto 0)
      );
-end dec7seg;
-architecture decoder of dec7seg is
+end decod7seg;
+architecture decoder of decod7seg is
 begin 
 F <= "1000000" when C = "0000" else -- 0
      "1111001" when C = "0001" else -- 1

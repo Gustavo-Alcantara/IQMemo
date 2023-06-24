@@ -13,9 +13,11 @@ begin
 	 process(clock, D, R) 
 	 begin 
 		 if R = '1' then
-			Q <= "00000000000000";
-		 elsif (clock'event and clock = '1' and E) then 
-			Q <= D;
- end if; 
+			Q <= "000000000000000";
+		 elsif (clock'event and clock = '1') then
+			if E = '1' then
+				Q <= D;
+			end if;
+		 end if; 
  end process;
 end behv;

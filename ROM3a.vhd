@@ -9,7 +9,7 @@ port(
 );
 end ROM3a;
 
-architecture arc_ROM3a of ROM3aa is
+architecture arc_ROM3a of ROM3a is
 begin
 
 --         switches 0 a 14

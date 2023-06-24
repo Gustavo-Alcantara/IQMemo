@@ -14,8 +14,10 @@ begin
 	 begin 
 		 if R = '1' then
 			Q <= "0000";
-		 elsif (clock'event and clock = '1' and E) then 
-			Q <= D;
- end if; 
+		 elsif (clock'event and clock = '1') then
+			if E = '1' then
+				Q <= D;
+			end if;
+		 end if; 
  end process;
 end behv;

@@ -1,5 +1,6 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
 
 entity datapath is
@@ -266,7 +267,7 @@ begin
 	Ct: counter_time port map(R1, E3, clk_1hz,tempo,end_time);
 	Cr: counter_round port map(R2, E4, clk_050Hz, X,end_round);
 	FSM1: FSM_clock_emu port map(R1, E2 or E3, clk_050Hz, clk_020Hz, clk_025Hz, clk_033Hz, clk_050Hz, clk_1Hz);
-	Mux1: mux4x1_1bit port map(clk_020Hz, clk_025Hz, clk_033Hz, clk_050Hz, SEL, end_FPGA);
+	Mux1: mux4x1_1bit port map(clk_020Hz, clk_025Hz, clk_033Hz, clk_050Hz, SEL(1 downto 0), end_FPGA);
 	Reg1: registrador_sel port map(R2, E1, clk_050Hz, SW(3 downto 0), SEL);
 	Reg2: registrador_user port map(R2,E3,clk_050Hz, SW(14 downto 0), USER);
 	Sub1: subtracao port map(Bonus_reg, erro, Bonus);
@@ -275,7 +276,7 @@ begin
 	Comp2: comp_erro port map(CODE_aux, USER, erro);
 	Mux2: mux4x1_15bits port map(sRom0a,sRom1a,sRom2a,sRom3a, SEL(3 downto 2), CODE_aux);
 	Mux3: mux4x1_32bits port map(sRom0,sRom1,sRom2,sRom3,SEL(3 downto 2), CODE);
-	LC: logica(X, Bonus_reg, SEL(1 downto 0), RESULT);
+	LC: logica port map(X, Bonus_reg, SEL(1 downto 0), RESULT);
 	
 	E23 <= E2 nor E3;
 	E25 <= E2 nor E5;
@@ -283,44 +284,45 @@ begin
 	
 	DECT1: decoder_termometrico port map(Bonus_reg, stermobonus);
 	DECT2: decoder_termometrico port map(X, stermoround);
-	andtermo <= stermoround and (not E1); 
-	Mux4: mux2x1_16bits port map(stermobonus, andtermo, SW(17), LEDR(15 downto0));
+	Mux13: mux2x1_16bits port map(stermoround, "0000000000000000", E1, andtermo);
+	Mux4: mux2x1_16bits port map(stermobonus, andtermo, SW(17), LEDR(15 downto 0));
 	
 	--Decoders para saída nos hexadecimal--
 	Dcod1: d_code port map(CODE(31 downto 28), sdecod7);
 	Dec1: decod7seg port map(RESULT(7 downto 4),sdec7);
 	Mux5: mux2x1_7bits port map(sdecod7,sdec7, E5, smuxhex7);
-	HEX7 <= E25 or smuxhex7;
+	Mux14: mux2x1_7bits port map(smuxhex7, "1111111", E25, HEX7);
 	
 	Dcod2: d_code port map(CODE(27 downto 24), sdecod6);
 	Dec2: decod7seg port map(RESULT(3 downto 0),sdec6);
 	Mux6: mux2x1_7bits port map(sdecod6,sdec6, E5, smuxhex6);
-	HEX6 <= E25 or smuxhex6;
+	Mux15: mux2x1_7bits port map(smuxhex6, "1111111", E25, HEX6);
 	
 	Dcod3: d_code port map(CODE(23 downto 20), sdecod5);
-	Mux7: mux2x1_7bits port map(sdecod5,"letra t", E3, smuxhex5);
-	HEX5 <= E23 or smuxhex5;
+	Mux7: mux2x1_7bits port map(sdecod5,"0000111", E3, smuxhex5);
+	Mux16: mux2x1_7bits port map(smuxhex5, "1111111", E23, HEX5);
 	
 	Dcod4: d_code port map(CODE(19 downto 16), sdecod4);
 	Dec3: decod7seg port map(Tempo,sdec4);
 	Mux8: mux2x1_7bits port map(sdecod4,sdec6, E3, smuxhex4);
-	HEX4 <= E23 or smuxhex4;
+	Mux17: mux2x1_7bits port map(smuxhex4, "1111111", E23, HEX4);
 	
 	Dcod5: d_code port map(CODE(15 downto 12), sdecod3);
-	Mux9: mux2x1_7bits port map(sdecod3,"letra C", E1, smuxhex3);
-	HEX3 <= E12 or smuxhex3;
+	Mux9: mux2x1_7bits port map(sdecod3,"1000110", E1, smuxhex3);
+	Mux18: mux2x1_7bits port map(smuxhex3, "1111111", E12, HEX3);
 	
 	Dcod6: d_code port map(CODE(11 downto 8), sdecod2);
 	Dec4: decod7seg port map("00"&SEL(3 downto 2),sdec2);
 	Mux10: mux2x1_7bits port map(sdecod4,sdec6, E1, smuxhex2);
-	HEX2 <= E12 or smuxhex2;
+	Mux19: mux2x1_7bits port map(smuxhex2, "1111111", E12, HEX2);
 	
 	Dcod7: d_code port map(CODE(7 downto 4), sdecod1);
-	Mux11: mux2x1_7bits port map(sdecod1,"letra L", E1, smuxhex1);
-	HEX1 <= E12 or smuxhex1;
+	Mux11: mux2x1_7bits port map(sdecod1,"1000111", E1, smuxhex1);
+	Mux20: mux2x1_7bits port map(smuxhex1, "1111111", E12, HEX1);
 	
 	Dcod8: d_code port map(CODE(3 downto 0), sdecod0);
 	Dec5: decod7seg port map("00"&SEL(1 downto 0),sdec0);
 	Mux12: mux2x1_7bits port map(sdecod0,sdec0, E1, smuxhex0);
-	HEX0 <= E12 or smuxhex0;
+	Mux21: mux2x1_7bits port map(smuxhex0, "1111111", E12, HEX0);
+	
 end arc;
