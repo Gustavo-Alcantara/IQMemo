@@ -53,7 +53,6 @@ component ButtonSync is port( --saida ja negada
     BTN1, BTN0   : out std_logic);
 
 end component;
-	signal BTN1, BTN0: std_logic; 
 
 begin
 		BS1: ButtonSync port map(KEY(1), KEY(0), CLK_500Hz, enter, reset);

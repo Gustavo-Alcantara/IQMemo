@@ -10,7 +10,7 @@ end registrador_sel;
 
 architecture behv of registrador_sel is
 begin
-	 process(clock, D, R) 
+	 process(clock) 
 	 begin 
 		 if R = '1' then
 			Q <= "0000";

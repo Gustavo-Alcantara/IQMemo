@@ -10,7 +10,7 @@ end registrador_user;
 
 architecture behv of registrador_user is
 begin
-	 process(clock, D, R) 
+	 process(clock) 
 	 begin 
 		 if R = '1' then
 			Q <= "000000000000000";

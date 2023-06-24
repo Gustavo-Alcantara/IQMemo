@@ -11,8 +11,13 @@ entity logica is port(
 end logica;
 		
 architecture behav of logica is
-signal result: std_logic_vector(10 downto 0);
+signal resultado: std_logic_vector(7 downto 0);
+signal divBonus: std_logic_vector(2 downto 0);
+signal divRound: std_logic_vector(1 downto 0);
+
 begin
-	result <= (nivel & "00000" + ('0' & bonus(2 downto 0))&"00" + "00" & round(1 downto 0));
-	points <= result(7 downto 0);
+	divBonus <= bonus(3 downto 1);
+	divRound <= round(1 downto 0);
+	resultado <= ("0" & nivel & "00000") + (divBonus & "00") + divRound;
+	points <= resultado(7 downto 0);
 end behav;

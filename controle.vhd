@@ -24,7 +24,7 @@ begin
         end if;
     end process;
     
-    P2: process(EA, reset)
+    P2: process(EA, reset, enter,end_FPGA, end_time)
     begin
 	 
         case EA is
@@ -35,7 +35,7 @@ begin
 				elsif reset ='0' then PE <= Init;
 				end if;
 			
-		  when Setup => R1 <= '1'; R2 <= '0'; E1 <= '1'; E2 <= '1'; E3 <= '0'; E4 <= '0'; E5 <= '0';
+		  when Setup => R1 <= '1'; R2 <= '0'; E1 <= '1'; E2 <= '0'; E3 <= '0'; E4 <= '0'; E5 <= '0';
 				if reset ='1' then
 					PE <= Setup;
 				elsif enter = '1' then
@@ -44,7 +44,7 @@ begin
 					PE <= Setup;
 				end if;
 				
-			when Play_FPGA => R1 <= '0'; R2 <= '0'; E1 <= '0'; E2 <= '1'; E3 <= '1'; E4 <= '0'; E5 <= '0';
+			when Play_FPGA => R1 <= '0'; R2 <= '0'; E1 <= '0'; E2 <= '1'; E3 <= '0'; E4 <= '0'; E5 <= '0';
 				if reset ='1' then
 					PE <= Setup;
 				elsif end_FPGA ='1' then
@@ -80,7 +80,7 @@ begin
 				else PE <= Play_FPGA;
 				end if;
 				
-			when Result => R1 <= '1'; R2 <= '1'; E1 <= '0'; E2 <= '0'; E3 <= '0'; E4 <= '0'; E5 <= '1';
+			when Result => R1 <= '1'; R2 <= '0'; E1 <= '0'; E2 <= '0'; E3 <= '0'; E4 <= '0'; E5 <= '1';
 				if reset ='1' then
 					PE <= Setup;
 				elsif enter ='1' then

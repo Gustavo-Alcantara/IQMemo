@@ -7,8 +7,8 @@ entity counter_round is port(
 		R: in std_logic;
 		E: in std_logic;
 		clock: in std_logic;
-		tc: out std_logic;
-		Q: out std_logic_vector(3 downto 0));
+		Q: out std_logic_vector(3 downto 0);
+		tc: out std_logic);
 		end counter_round;
 		
 architecture arqct of counter_round is
